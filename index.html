@@ -41,6 +41,10 @@
             .transition-all-300 {
                 @apply transition-all duration-300;
             }
+        	a{
+        	color : green;
+        	}
+
         }
     </style>
 </head>
@@ -50,6 +54,7 @@
         <i class="fa-solid fa-lock text-primary text-8xl mb-8 icon-shadow"></i>
         <h1 class="text-6xl font-bold text-primary mb-4">垃圾桶已永久封锁</h1>
         <p class="text-xl text-gray-400 max-w-md">你投递的所有烦恼与糟糕事被丢弃在了2025年12月31日23:59:59的时空里，现在去拥抱2026的自己吧！</p>
+        <a href = 'https://vex-r.github.io/HappyNewYear/'>收到了一封信</a>
     </div>
 
     <!-- 正常状态容器 -->
@@ -60,7 +65,7 @@
             <h1 class="text-5xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
              时光垃圾桶
             </h1>
-            <p class="text-gray-400 mt-2 text-lg">这是一个"垃圾桶"，你可以把至今遭遇过的不顺或烦恼扔进这里，我会帮你在2026到来之前将它们打包丢在2025最后的时空里。记得在2026年0点刷新网页！</p>
+            <p class="text-gray-400 mt-2 text-lg">这是一个"垃圾桶"，你可以把至今遭遇过的不顺或烦恼扔进这里，我会帮你在2026到来之前将它们打包丢在2025最后的时空里。放心，你写下的东西别人是看不到的~记得在2026年0点刷新网页！</p>
         </header>
 
         <!-- 输入区域 -->
@@ -69,7 +74,7 @@
                 <input 
                     type="text" 
                     id="message-input" 
-                    placeholder="丢点什么进来吧，吐槽也可以..."
+                    placeholder="丢点什么进来吧，吐槽也可以，垃圾桶会自动帮你清理..."
                     class="w-full py-4 px-6 bg-accent border-2 border-primary/30 rounded-lg text-white placeholder-gray-500 input-focus transition-all-300"
                 >
                 <button id="add-btn" class="absolute right-3 top-1/2 -translate-y-1/2 text-primary hover:text-primary/80 transition-all-300">
@@ -129,7 +134,7 @@
                 const emptyState = document.createElement('div');
                 emptyState.className = 'text-center py-12 text-gray-500';
                 emptyState.innerHTML = `
-                    <p class="text-xl">垃圾桶空空如也！</p>
+                    <p class="text-xl">所有的垃圾已经被丢进去了噢</p>
                 `;
                 messagesContainer.appendChild(emptyState);
                 return;
@@ -226,4 +231,5 @@
         init();
     </script>
 </body>
+
 </html>
